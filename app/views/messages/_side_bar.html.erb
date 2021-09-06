@@ -2,7 +2,7 @@
     <div class = "side_bar_header">
 
       <div class="side_header_user">
-          <a href="#">Tom</a>
+        <%= link_to current_user.name, edit_user_path(current_user) %>
       </div>
 
       <div class="side_header_button">
