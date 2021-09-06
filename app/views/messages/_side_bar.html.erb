@@ -6,7 +6,7 @@
       </div>
 
       <div class="side_header_button">
-           <a href="#">チャットを作成する</a>
+           <%= link_to "チャットを作成する", new_room_path %>
       </div>
 
     </div>
@@ -14,48 +14,12 @@
     <%# ルームリスト %>
     <div class = "side_bar_roomlist">
 
-        <div class="chat_room">
-          <a href="#">techroom1</a>
-        </div>
+      <% current_user.rooms.each do |room|  %>
 
         <div class="chat_room">
-          <a href="#">techroom2</a>
+          <a href="#"> <%= room.name  %> </a>
         </div>
 
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
-
-        <div class="chat_room">
-          <a href="#">techroom3</a>
-        </div>
+      <% end  %>
 
     </div>
